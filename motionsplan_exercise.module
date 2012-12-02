@@ -18,6 +18,25 @@ function motionsplan_exercise_filter_info() {
 }
 
 /**
+ * Implements hook_entity_info_alter().
+ */
+function motionsplan_exercise_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['exercise_list'] = array(
+    'label' => t('Exercise list'),
+    'custom settings' => TRUE,
+  );
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function motionsplan_exercise_preprocess_node(&$vars) {
+  if ($vars['view_mode'] == 'exercise_list') {
+    $vars['theme_hook_suggestions'][] = 'node__' . $vars['type'] . '__exercise_list';
+  }
+}
+
+/**
  * Implements filter process callback.
  */
 function _motionsplan_exercise_filter_process($text, $filter, $format) {
@@ -38,3 +57,4 @@ function _motionsplan_exercise_display_embed($matches) {
   $output = 'Her skal øvelse nummer ' . $matches[1] . ' vises. Vi arbejder på sagen.';
   return $output;
 }
+
