@@ -10,7 +10,7 @@ function motionsplan_exercise_filter_info() {
   $filters['motionsplan_exercise'] = array(
     'title' => t('Motionsplan Exercise Reference'),
     'description' => t('Allows the user to include exercises in entities.'),
-    'process callback' => '_motionsplan_exercise_process',
+    'process callback' => '_motionsplan_exercise_filter_process',
     'tips callback' => '_motionsplan_exercise_tips',
     'cache' => TRUE,
   );
@@ -20,7 +20,7 @@ function motionsplan_exercise_filter_info() {
 /**
  * Implements filter process callback.
  */
-function _motionsplan_exercise_process($text, $filter, $format) {
+function _motionsplan_exercise_filter_process($text, $filter, $format) {
   return preg_replace_callback('@\[motionsplan-exercise:?(.*)\]@', '_motionsplan_exercise_display_embed', $text);
 }
 
@@ -29,13 +29,6 @@ function _motionsplan_exercise_process($text, $filter, $format) {
  */
 function _motionsplan_exercise_tips($filter, $format, $long = FALSE) {
   return t('Use [motionsplan-exercise:xxx] with xxx node id exercise');
-}
-
-/**
- * Process callback for hook_filter_info().
- */
-function motionsplan_exercise_filter_process($text, $filter, $format) {
-  return preg_replace_callback('@\[motionsplan-exercise:?(.*)\]@', '_motionsplan_exercise_display_embed', $text);
 }
 
 /**
