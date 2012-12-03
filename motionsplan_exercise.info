@@ -1,7 +1,7 @@
 name = Motionsplan Exercise
 description = Makes it possible to describe exercises
-core = 6.x
-package = Features
+core = 7.x
+package = Motionsplan
 php = 5.2.4
 version = 7.x-0.1
 project = motionsplan_exercise
