@@ -21,7 +21,7 @@ function motionsplan_exercise_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_exercise';
-  $strongarm->value = 0;
+  $strongarm->value = '2';
   $export['comment_anonymous_exercise'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -35,7 +35,7 @@ function motionsplan_exercise_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_exercise';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['comment_default_mode_exercise'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -63,21 +63,21 @@ function motionsplan_exercise_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_form_location_exercise';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['comment_form_location_exercise'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_exercise';
-  $strongarm->value = 1;
+  $strongarm->value = '0';
   $export['comment_preview_exercise'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_exercise';
-  $strongarm->value = '0';
+  $strongarm->value = 0;
   $export['comment_subject_field_exercise'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -238,30 +238,42 @@ function motionsplan_exercise_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__exercise';
   $strongarm->value = array(
-    'view_modes' => array(
-      'teaser' => array(
-        'custom_settings' => TRUE,
-      ),
-      'full' => array(
-        'custom_settings' => FALSE,
-      ),
-      'rss' => array(
-        'custom_settings' => FALSE,
-      ),
-      'search_index' => array(
-        'custom_settings' => FALSE,
-      ),
-      'search_result' => array(
-        'custom_settings' => FALSE,
-      ),
-      'token' => array(
-        'custom_settings' => FALSE,
-      ),
-    ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'body' => array(
+          'weight' => 0,
+        ),
+        'title' => array(
+          'weight' => '0',
+        ),
+        'revision_information' => array(
+          'weight' => '3',
+        ),
+        'author' => array(
+          'weight' => '6',
+        ),
+        'options' => array(
+          'weight' => '7',
+        ),
+        'comment_settings' => array(
+          'weight' => '5',
+        ),
+        'menu' => array(
+          'weight' => '1',
+        ),
+        'taxonomy' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '11',
+        ),
+        'metatags' => array(
+          'weight' => '10',
+        ),
+      ),
       'display' => array(),
     ),
+    'view_modes' => array(),
   );
   $export['field_bundle_settings_node__exercise'] = $strongarm;
 
@@ -271,6 +283,20 @@ function motionsplan_exercise_strongarm() {
   $strongarm->name = 'language_content_type_exercise';
   $strongarm->value = '0';
   $export['language_content_type_exercise'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_exercise';
+  $strongarm->value = array();
+  $export['menu_options_exercise'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_exercise';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_exercise'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -286,8 +312,15 @@ function motionsplan_exercise_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_exercise';
-  $strongarm->value = 1;
+  $strongarm->value = '1';
   $export['node_preview_exercise'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_exercise';
+  $strongarm->value = 0;
+  $export['node_submitted_exercise'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

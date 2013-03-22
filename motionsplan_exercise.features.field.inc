@@ -61,6 +61,12 @@ function motionsplan_exercise_field_default_fields() {
           'type' => 'text_default',
           'weight' => '-4',
         ),
+        'exercise_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'full' => array(
           'label' => 'above',
           'module' => 'text',
@@ -173,6 +179,12 @@ function motionsplan_exercise_field_default_fields() {
           'type' => 'text_default',
           'weight' => '-1',
         ),
+        'exercise_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'full' => array(
           'label' => 'above',
           'module' => 'text',
@@ -240,7 +252,7 @@ function motionsplan_exercise_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => NULL,
+        'default_image' => 0,
         'description_field' => '1',
         'list_default' => '1',
         'list_field' => FALSE,
@@ -265,6 +277,12 @@ function motionsplan_exercise_field_default_fields() {
           ),
           'type' => 'image',
           'weight' => '-2',
+        ),
+        'exercise_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'full' => array(
           'label' => 'hidden',
@@ -375,6 +393,12 @@ function motionsplan_exercise_field_default_fields() {
           'type' => 'text_default',
           'weight' => '-3',
         ),
+        'exercise_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'full' => array(
           'label' => 'above',
           'module' => 'text',
@@ -472,6 +496,12 @@ function motionsplan_exercise_field_default_fields() {
           ),
           'type' => 'file_rendered',
           'weight' => '2',
+        ),
+        'exercise_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'full' => array(
           'label' => 'above',
@@ -600,6 +630,12 @@ function motionsplan_exercise_field_default_fields() {
           'type' => 'taxonomy_term_reference_link',
           'weight' => '10',
         ),
+        'exercise_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -665,6 +701,12 @@ function motionsplan_exercise_field_default_fields() {
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '10',
+        ),
+        'exercise_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -732,6 +774,12 @@ function motionsplan_exercise_field_default_fields() {
           'type' => 'taxonomy_term_reference_link',
           'weight' => '10',
         ),
+        'exercise_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -794,6 +842,12 @@ function motionsplan_exercise_field_default_fields() {
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '10',
+        ),
+        'exercise_list' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'teaser' => array(
           'label' => 'above',
