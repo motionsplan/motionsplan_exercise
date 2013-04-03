@@ -40,7 +40,7 @@ function motionsplan_exercise_preprocess_node(&$vars) {
  * Implements filter process callback.
  */
 function _motionsplan_exercise_filter_process($text, $filter, $format) {
-  return preg_replace_callback('@\[motionsplan-exercise:?(.*)\]@', '_motionsplan_exercise_display_embed', $text);
+  return preg_replace_callback('/\[motionsplan-exercise:?([^]]*)?\]/', '_motionsplan_exercise_display_embed', $text);
 }
 
 /**
@@ -54,7 +54,7 @@ function _motionsplan_exercise_tips($filter, $format, $long = FALSE) {
  * Utility function to do the hard work getting the images
  */
 function _motionsplan_exercise_display_embed($matches) {
-  $output = 'Her skal øvelse nummer ' . $matches[1] . ' vises. Vi arbejder på sagen.';
+  $output = '<strong>Her skal øvelse nummer ' . $matches[1] . ' vises. Vi arbejder på sagen.</strong>';
   return $output;
 }
 
