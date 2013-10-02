@@ -79,7 +79,7 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['fields']['field_exercise_images']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_exercise_images']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_exercise_images']['settings'] = array(
-    'image_style' => 'thumbnail',
+    'image_style' => 'media_thumbnail',
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_exercise_images']['delta_limit'] = '1';
@@ -92,6 +92,7 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['text'] = '<h3>[title]</h3>';
+  $handler->display->display_options['fields']['title']['element_type'] = 'h5';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Felt: Indhold: Introduktion til øvelse */
   $handler->display->display_options['fields']['field_exercise_intro']['id'] = 'field_exercise_intro';
