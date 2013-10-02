@@ -21,7 +21,7 @@ function motionsplan_exercise_taxonomy_default_vocabularies() {
       'name' => 'Redskaber',
       'machine_name' => 'vocabulary_3',
       'description' => '',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
     ),
