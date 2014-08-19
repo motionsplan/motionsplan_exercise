@@ -9,6 +9,14 @@
  */
 function motionsplan_exercise_taxonomy_default_vocabularies() {
   return array(
+    'motionsplan_activity_category' => array(
+      'name' => 'Kategori for aktivitet',
+      'machine_name' => 'motionsplan_activity_category',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+    ),
     'vocabulary_1' => array(
       'name' => 'Tags',
       'machine_name' => 'vocabulary_1',

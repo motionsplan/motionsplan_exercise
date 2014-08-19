@@ -230,6 +230,36 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Billeder af øvelsen */
+  $handler->display->display_options['fields']['field_exercise_images']['id'] = 'field_exercise_images';
+  $handler->display->display_options['fields']['field_exercise_images']['table'] = 'field_data_field_exercise_images';
+  $handler->display->display_options['fields']['field_exercise_images']['field'] = 'field_exercise_images';
+  $handler->display->display_options['fields']['field_exercise_images']['label'] = '';
+  $handler->display->display_options['fields']['field_exercise_images']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exercise_images']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_exercise_images']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => 'content',
+  );
+  $handler->display->display_options['fields']['field_exercise_images']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_exercise_images']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_exercise_images']['separator'] = '';
+  /* Felt: Indhold: Titel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<h3>[title]</h3>';
+  $handler->display->display_options['fields']['title']['element_type'] = 'h5';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Felt: Indhold: Introduktion til øvelse */
+  $handler->display->display_options['fields']['field_exercise_intro']['id'] = 'field_exercise_intro';
+  $handler->display->display_options['fields']['field_exercise_intro']['table'] = 'field_data_field_exercise_intro';
+  $handler->display->display_options['fields']['field_exercise_intro']['field'] = 'field_exercise_intro';
+  $handler->display->display_options['fields']['field_exercise_intro']['label'] = '';
+  $handler->display->display_options['fields']['field_exercise_intro']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sorteringskriterie: Indhold: Opdateringsdato */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
