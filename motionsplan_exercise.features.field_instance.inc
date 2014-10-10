@@ -693,6 +693,8 @@ function motionsplan_exercise_field_default_field_instances() {
       'active' => 1,
       'module' => 'colorfield',
       'settings' => array(
+        'colorfield_colorpicker_type' => 'farbtastic',
+        'colorfield_enable_colorpicker' => TRUE,
         'colorfield_options' => array(
           'colorfield_colorpicker_type' => 'farbtastic',
           'colorfield_enable_colorpicker' => 1,

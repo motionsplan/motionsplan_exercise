@@ -71,7 +71,7 @@ function motionsplan_exercise_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Felt: Indhold: Billeder af øvelsen */
+  /* Field: Content: Billeder af øvelsen */
   $handler->display->display_options['fields']['field_exercise_images']['id'] = 'field_exercise_images';
   $handler->display->display_options['fields']['field_exercise_images']['table'] = 'field_data_field_exercise_images';
   $handler->display->display_options['fields']['field_exercise_images']['field'] = 'field_exercise_images';
@@ -85,7 +85,7 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['fields']['field_exercise_images']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_exercise_images']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_exercise_images']['separator'] = '';
-  /* Felt: Indhold: Titel */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -94,21 +94,21 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['text'] = '<h3>[title]</h3>';
   $handler->display->display_options['fields']['title']['element_type'] = 'h5';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Felt: Indhold: Introduktion til øvelse */
+  /* Field: Content: Introduktion til øvelse */
   $handler->display->display_options['fields']['field_exercise_intro']['id'] = 'field_exercise_intro';
   $handler->display->display_options['fields']['field_exercise_intro']['table'] = 'field_data_field_exercise_intro';
   $handler->display->display_options['fields']['field_exercise_intro']['field'] = 'field_exercise_intro';
   $handler->display->display_options['fields']['field_exercise_intro']['label'] = '';
   $handler->display->display_options['fields']['field_exercise_intro']['element_label_colon'] = FALSE;
-  /* Sorteringskriterie: Indhold: Titel */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Sorteringskriterie: Indhold: Opdateringsdato */
+  /* Sort criterion: Content: Updated date */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
   $handler->display->display_options['sorts']['changed']['table'] = 'node';
   $handler->display->display_options['sorts']['changed']['field'] = 'changed';
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -117,14 +117,14 @@ function motionsplan_exercise_views_default_views() {
   );
   $handler->display->display_options['filters']['type']['group'] = '0';
   $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = '0';
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Har taksonomiterm */
+  /* Filter criterion: Content: Has taxonomy term */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
@@ -141,7 +141,7 @@ function motionsplan_exercise_views_default_views() {
   $handler = $view->new_display('page', 'Side', 'page_1');
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -150,14 +150,14 @@ function motionsplan_exercise_views_default_views() {
   );
   $handler->display->display_options['filters']['type']['group'] = '0';
   $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = '0';
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Søg: Søgeord */
+  /* Filter criterion: Search: Search Terms */
   $handler->display->display_options['filters']['keys']['id'] = 'keys';
   $handler->display->display_options['filters']['keys']['table'] = 'search_index';
   $handler->display->display_options['filters']['keys']['field'] = 'keys';
@@ -168,7 +168,7 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['filters']['keys']['expose']['label'] = 'Søg';
   $handler->display->display_options['filters']['keys']['expose']['operator'] = 'keys_op';
   $handler->display->display_options['filters']['keys']['expose']['identifier'] = 'keys';
-  /* Filterkriterie: Indhold: Har taksonomiterm */
+  /* Filter criterion: Content: Has taxonomy term */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
@@ -181,7 +181,7 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['filters']['tid']['reduce_duplicates'] = TRUE;
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'vocabulary_4';
-  /* Filterkriterie: Indhold: Har taksonomiterm */
+  /* Filter criterion: Content: Has taxonomy term */
   $handler->display->display_options['filters']['tid_1']['id'] = 'tid_1';
   $handler->display->display_options['filters']['tid_1']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid_1']['field'] = 'tid';
@@ -194,7 +194,7 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['filters']['tid_1']['reduce_duplicates'] = TRUE;
   $handler->display->display_options['filters']['tid_1']['type'] = 'select';
   $handler->display->display_options['filters']['tid_1']['vocabulary'] = 'vocabulary_3';
-  /* Filterkriterie: Indhold: Har taksonomiterm */
+  /* Filter criterion: Content: Has taxonomy term */
   $handler->display->display_options['filters']['tid_2']['id'] = 'tid_2';
   $handler->display->display_options['filters']['tid_2']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid_2']['field'] = 'tid';
@@ -207,7 +207,7 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['filters']['tid_2']['reduce_duplicates'] = TRUE;
   $handler->display->display_options['filters']['tid_2']['type'] = 'select';
   $handler->display->display_options['filters']['tid_2']['vocabulary'] = 'vocabulary_5';
-  /* Filterkriterie: Indhold: Har taksonomiterm */
+  /* Filter criterion: Content: Has taxonomy term */
   $handler->display->display_options['filters']['tid_3']['id'] = 'tid_3';
   $handler->display->display_options['filters']['tid_3']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid_3']['field'] = 'tid';
@@ -231,7 +231,7 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Billeder af øvelsen */
+  /* Field: Content: Billeder af øvelsen */
   $handler->display->display_options['fields']['field_exercise_images']['id'] = 'field_exercise_images';
   $handler->display->display_options['fields']['field_exercise_images']['table'] = 'field_data_field_exercise_images';
   $handler->display->display_options['fields']['field_exercise_images']['field'] = 'field_exercise_images';
@@ -245,7 +245,7 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['fields']['field_exercise_images']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_exercise_images']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_exercise_images']['separator'] = '';
-  /* Felt: Indhold: Titel */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -254,25 +254,25 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['text'] = '<h3>[title]</h3>';
   $handler->display->display_options['fields']['title']['element_type'] = 'h5';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Felt: Indhold: Introduktion til øvelse */
+  /* Field: Content: Introduktion til øvelse */
   $handler->display->display_options['fields']['field_exercise_intro']['id'] = 'field_exercise_intro';
   $handler->display->display_options['fields']['field_exercise_intro']['table'] = 'field_data_field_exercise_intro';
   $handler->display->display_options['fields']['field_exercise_intro']['field'] = 'field_exercise_intro';
   $handler->display->display_options['fields']['field_exercise_intro']['label'] = '';
   $handler->display->display_options['fields']['field_exercise_intro']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sorteringskriterie: Indhold: Opdateringsdato */
+  /* Sort criterion: Content: Updated date */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
   $handler->display->display_options['sorts']['changed']['table'] = 'node';
   $handler->display->display_options['sorts']['changed']['field'] = 'changed';
   $handler->display->display_options['sorts']['changed']['order'] = 'DESC';
-  /* Sorteringskriterie: Indhold: Titel */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -281,14 +281,14 @@ function motionsplan_exercise_views_default_views() {
   );
   $handler->display->display_options['filters']['type']['group'] = '0';
   $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = '0';
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Har taksonomiterm */
+  /* Filter criterion: Content: Has taxonomy term */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
@@ -300,7 +300,7 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'tid';
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'vocabulary_4';
-  /* Filterkriterie: Indhold: Billeder af øvelsen (field_exercise_images:fid) */
+  /* Filter criterion: Content: Billeder af øvelsen (field_exercise_images:fid) */
   $handler->display->display_options['filters']['field_exercise_images_fid']['id'] = 'field_exercise_images_fid';
   $handler->display->display_options['filters']['field_exercise_images_fid']['table'] = 'field_data_field_exercise_images';
   $handler->display->display_options['filters']['field_exercise_images_fid']['field'] = 'field_exercise_images_fid';
@@ -314,7 +314,7 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Billeder af øvelsen */
+  /* Field: Content: Billeder af øvelsen */
   $handler->display->display_options['fields']['field_exercise_images']['id'] = 'field_exercise_images';
   $handler->display->display_options['fields']['field_exercise_images']['table'] = 'field_data_field_exercise_images';
   $handler->display->display_options['fields']['field_exercise_images']['field'] = 'field_exercise_images';
@@ -328,7 +328,7 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['fields']['field_exercise_images']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_exercise_images']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_exercise_images']['separator'] = '';
-  /* Felt: Indhold: Titel */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -337,13 +337,13 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['text'] = '<h4>[title]</h4>';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Felt: Indhold: Introduktion til øvelse */
+  /* Field: Content: Introduktion til øvelse */
   $handler->display->display_options['fields']['field_exercise_intro']['id'] = 'field_exercise_intro';
   $handler->display->display_options['fields']['field_exercise_intro']['table'] = 'field_data_field_exercise_intro';
   $handler->display->display_options['fields']['field_exercise_intro']['field'] = 'field_exercise_intro';
   $handler->display->display_options['fields']['field_exercise_intro']['label'] = '';
   $handler->display->display_options['fields']['field_exercise_intro']['element_label_colon'] = FALSE;
-  /* Felt: Indhold: Nid */
+  /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -352,7 +352,7 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -361,14 +361,14 @@ function motionsplan_exercise_views_default_views() {
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
   $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Søg: Søgeord */
+  /* Filter criterion: Search: Search Terms */
   $handler->display->display_options['filters']['keys']['id'] = 'keys';
   $handler->display->display_options['filters']['keys']['table'] = 'search_index';
   $handler->display->display_options['filters']['keys']['field'] = 'keys';
@@ -385,7 +385,7 @@ function motionsplan_exercise_views_default_views() {
     1 => 0,
     4 => 0,
   );
-  /* Filterkriterie: Indhold: Har taksonomiterm */
+  /* Filter criterion: Content: Has taxonomy term */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
@@ -407,36 +407,6 @@ function motionsplan_exercise_views_default_views() {
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'vocabulary_4';
   $handler->display->display_options['attach'] = array(
     0 => 'node:field_program_exercises:trainingprogram',
-  );
-  $translatables['exercise_list'] = array(
-    t('Defaults'),
-    t('Træningsøvelser'),
-    t('mere'),
-    t('Udfør'),
-    t('Gendan'),
-    t('Sortér efter'),
-    t('Stigende'),
-    t('Faldende'),
-    t('Antal elementer'),
-    t('- Alle -'),
-    t('Forskydning'),
-    t('« første'),
-    t('‹ forrige'),
-    t('næste ›'),
-    t('sidste »'),
-    t('<h3>[title]</h3>'),
-    t('Taksonomi: Term'),
-    t('Side'),
-    t('Søg'),
-    t('Muskelgruppe'),
-    t('Redskaber'),
-    t('Muskler'),
-    t('Tag'),
-    t('Blok'),
-    t('Senest opdaterede træningsøvelser'),
-    t('Reference dialog Search'),
-    t('<h4>[title]</h4>'),
-    t('Søgeord'),
   );
   $export['exercise_list'] = $view;
 
