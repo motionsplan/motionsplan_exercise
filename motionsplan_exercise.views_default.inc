@@ -385,26 +385,54 @@ function motionsplan_exercise_views_default_views() {
     1 => 0,
     4 => 0,
   );
-  /* Filter criterion: Content: Has taxonomy term */
-  $handler->display->display_options['filters']['tid']['id'] = 'tid';
-  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['group'] = 1;
-  $handler->display->display_options['filters']['tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
-  $handler->display->display_options['filters']['tid']['expose']['label'] = 'Taksonomi: Term';
-  $handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
-  $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'tid';
-  $handler->display->display_options['filters']['tid']['expose']['remember'] = TRUE;
-  $handler->display->display_options['filters']['tid']['expose']['remember_roles'] = array(
+  /* Filter criterion: Content: Træningsform (field_training_type) */
+  $handler->display->display_options['filters']['field_training_type_tid']['id'] = 'field_training_type_tid';
+  $handler->display->display_options['filters']['field_training_type_tid']['table'] = 'field_data_field_training_type';
+  $handler->display->display_options['filters']['field_training_type_tid']['field'] = 'field_training_type_tid';
+  $handler->display->display_options['filters']['field_training_type_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_training_type_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_training_type_tid']['expose']['operator_id'] = 'field_training_type_tid_op';
+  $handler->display->display_options['filters']['field_training_type_tid']['expose']['label'] = 'Træningstype';
+  $handler->display->display_options['filters']['field_training_type_tid']['expose']['operator'] = 'field_training_type_tid_op';
+  $handler->display->display_options['filters']['field_training_type_tid']['expose']['identifier'] = 'field_training_type_tid';
+  $handler->display->display_options['filters']['field_training_type_tid']['expose']['remember_roles'] = array(
     2 => '2',
-    3 => 0,
     1 => 0,
-    4 => 0,
   );
-  $handler->display->display_options['filters']['tid']['reduce_duplicates'] = TRUE;
-  $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'vocabulary_4';
+  $handler->display->display_options['filters']['field_training_type_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_training_type_tid']['vocabulary'] = 'type_of_training';
+  /* Filter criterion: Content: Udstyr (taxonomy_vocabulary_3) */
+  $handler->display->display_options['filters']['taxonomy_vocabulary_3_tid']['id'] = 'taxonomy_vocabulary_3_tid';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_3_tid']['table'] = 'field_data_taxonomy_vocabulary_3';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_3_tid']['field'] = 'taxonomy_vocabulary_3_tid';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_3_tid']['group'] = 1;
+  $handler->display->display_options['filters']['taxonomy_vocabulary_3_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['taxonomy_vocabulary_3_tid']['expose']['operator_id'] = 'taxonomy_vocabulary_3_tid_op';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_3_tid']['expose']['label'] = 'Udstyr';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_3_tid']['expose']['operator'] = 'taxonomy_vocabulary_3_tid_op';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_3_tid']['expose']['identifier'] = 'taxonomy_vocabulary_3_tid';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_3_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+  );
+  $handler->display->display_options['filters']['taxonomy_vocabulary_3_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_3_tid']['vocabulary'] = 'vocabulary_3';
+  /* Filter criterion: Content: Træningsfokus (taxonomy_vocabulary_4) */
+  $handler->display->display_options['filters']['taxonomy_vocabulary_4_tid']['id'] = 'taxonomy_vocabulary_4_tid';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_4_tid']['table'] = 'field_data_taxonomy_vocabulary_4';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_4_tid']['field'] = 'taxonomy_vocabulary_4_tid';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_4_tid']['group'] = 1;
+  $handler->display->display_options['filters']['taxonomy_vocabulary_4_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['taxonomy_vocabulary_4_tid']['expose']['operator_id'] = 'taxonomy_vocabulary_4_tid_op';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_4_tid']['expose']['label'] = 'Træningsfokus';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_4_tid']['expose']['operator'] = 'taxonomy_vocabulary_4_tid_op';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_4_tid']['expose']['identifier'] = 'taxonomy_vocabulary_4_tid';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_4_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+  );
+  $handler->display->display_options['filters']['taxonomy_vocabulary_4_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_4_tid']['vocabulary'] = 'vocabulary_4';
   $handler->display->display_options['attach'] = array(
     0 => 'node:field_program_exercises:trainingprogram',
   );
