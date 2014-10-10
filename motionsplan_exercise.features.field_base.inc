@@ -229,13 +229,13 @@ function motionsplan_exercise_field_default_field_bases() {
     'type_name' => 'exercise',
   );
 
-  // Exported field_base: 'taxonomy_vocabulary_1'
-  $field_bases['taxonomy_vocabulary_1'] = array(
+  // Exported field_base: 'field_training_type'
+  $field_bases['field_training_type'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'taxonomy_vocabulary_1',
+    'field_name' => 'field_training_type',
     'foreign keys' => array(
       'tid' => array(
         'columns' => array(
@@ -254,11 +254,10 @@ function motionsplan_exercise_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'vocabulary_1',
+          'vocabulary' => 'type_of_training',
           'parent' => 0,
         ),
       ),
-      'required' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',

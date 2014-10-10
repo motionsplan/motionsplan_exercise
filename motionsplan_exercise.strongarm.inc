@@ -265,7 +265,7 @@ function motionsplan_exercise_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '11',
         ),
         'metatags' => array(
           'weight' => '6',

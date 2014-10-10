@@ -33,7 +33,7 @@ function motionsplan_exercise_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 9,
       ),
       'full' => array(
         'label' => 'above',
@@ -118,7 +118,7 @@ function motionsplan_exercise_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -139,7 +139,7 @@ function motionsplan_exercise_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 13,
+      'weight' => 9,
     ),
   );
 
@@ -161,7 +161,7 @@ function motionsplan_exercise_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'above',
@@ -223,9 +223,13 @@ function motionsplan_exercise_field_default_field_instances() {
         'weight' => -2,
       ),
       'exercise_list' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'thumbnail',
+        ),
+        'type' => 'image',
         'weight' => 0,
       ),
       'full' => array(
@@ -326,7 +330,7 @@ function motionsplan_exercise_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
       ),
       'full' => array(
         'label' => 'above',
@@ -398,7 +402,7 @@ function motionsplan_exercise_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
@@ -485,48 +489,46 @@ function motionsplan_exercise_field_default_field_instances() {
     'widget_type' => 'media_generic',
   );
 
-  // Exported field_instance: 'node-exercise-taxonomy_vocabulary_1'
-  $field_instances['node-exercise-taxonomy_vocabulary_1'] = array(
+  // Exported field_instance: 'node-exercise-field_training_type'
+  $field_instances['node-exercise-field_training_type'] = array(
     'bundle' => 'exercise',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Beskriv øvelsen med nøgleord',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
+        'weight' => 12,
       ),
       'exercise_list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'taxonomy_vocabulary_1',
-    'label' => 'Tags',
+    'field_name' => 'field_training_type',
+    'label' => 'Træningsform',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 12,
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 6,
     ),
   );
 
@@ -548,7 +550,7 @@ function motionsplan_exercise_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -559,19 +561,20 @@ function motionsplan_exercise_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'taxonomy_vocabulary_3',
-    'label' => 'Redskaber',
+    'label' => 'Udstyr',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'module' => 'taxonomy',
+      'active' => 0,
+      'module' => 'options',
       'settings' => array(
         'autocomplete_path' => 'taxonomy/autocomplete',
         'size' => 60,
       ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 11,
+      'type' => 'options_buttons',
+      'weight' => 8,
     ),
   );
 
@@ -593,7 +596,7 @@ function motionsplan_exercise_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -604,16 +607,17 @@ function motionsplan_exercise_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'taxonomy_vocabulary_4',
-    'label' => 'Funktionel bevægelse',
+    'label' => 'Træningsfokus',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'options',
       'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 9,
+      'type' => 'options_buttons',
+      'weight' => 7,
     ),
   );
 
@@ -635,7 +639,7 @@ function motionsplan_exercise_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -708,18 +712,17 @@ function motionsplan_exercise_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Alternative navne');
-  t('Beskriv øvelsen med nøgleord');
   t('Beskrivelse af øvelsen');
   t('Billeder af øvelsen');
   t('En kort beskrivelse af øvelsen. Vises på lister hvor øvelsen indgår samt som introduktion på siden hvor man ser øvelsen. ');
   t('En længere og mere præcis beskrivelse af øvelsen. Skal indeholde information om hvorledes øvelsen foregår, hvilke steps den sker i og ligende.');
   t('Farve');
-  t('Funktionel bevægelse');
   t('Introduktion til øvelse');
   t('Kategori');
   t('Muskler');
-  t('Redskaber');
-  t('Tags');
+  t('Træningsfokus');
+  t('Træningsform');
+  t('Udstyr');
   t('Upload billeder til øvelsen');
   t('Video af øvelsen');
 

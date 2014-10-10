@@ -17,6 +17,14 @@ function motionsplan_exercise_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => 0,
     ),
+    'type_of_training' => array(
+      'name' => 'Type of training',
+      'machine_name' => 'type_of_training',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+    ),
     'vocabulary_1' => array(
       'name' => 'Tags',
       'machine_name' => 'vocabulary_1',
