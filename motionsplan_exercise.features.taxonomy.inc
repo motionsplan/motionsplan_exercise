@@ -50,9 +50,9 @@ function motionsplan_exercise_taxonomy_default_vocabularies() {
       'weight' => 0,
     ),
     'vocabulary_5' => array(
-      'name' => 'Muskler',
+      'name' => 'Muskelgruppe',
       'machine_name' => 'vocabulary_5',
-      'description' => '<p>Muskler der indgår i bevægelsen</p>',
+      'description' => 'Muskelgruppe der indgår i bevægelsen',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
