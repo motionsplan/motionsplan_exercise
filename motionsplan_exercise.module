@@ -1,6 +1,23 @@
 <?php
+/**
+ * @file
+ */
 
 include_once('motionsplan_exercise.features.inc');
+
+/**
+ * Implements hook_migrate_api().
+ */
+function motionsplan_exercise_migrate_api() {
+  $api = array(
+    'api' => 2,
+    'migrations' => array(
+      'MotionsplanExerciseNode' => array('class_name' => 'MotionsplanExerciseNode'),
+    ),
+  );
+
+  return $api;
+}
 
 /**
 * Implements hook_filter_info().
@@ -57,4 +74,3 @@ function _motionsplan_exercise_display_embed($matches) {
   $output = '<strong>Her skal øvelse nummer ' . $matches[1] . ' vises. Vi arbejder på sagen.</strong>';
   return $output;
 }
-

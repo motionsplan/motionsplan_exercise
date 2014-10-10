@@ -90,3 +90,4 @@ features[variable][] = node_preview_exercise
 features[variable][] = node_submitted_exercise
 features[variable][] = scheduler_exercise
 features[views_view][] = exercise_list
+files[] = motionsplan_exercise.migrate.inc
