@@ -366,7 +366,7 @@ function motionsplan_exercise_field_default_field_bases() {
   // Exported field_base: 'taxonomy_vocabulary_5'
   $field_bases['taxonomy_vocabulary_5'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'taxonomy_vocabulary_5',
