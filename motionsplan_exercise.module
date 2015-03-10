@@ -71,6 +71,7 @@ function _motionsplan_exercise_tips($filter, $format, $long = FALSE) {
  * Utility function to do the hard work getting the images
  */
 function _motionsplan_exercise_display_embed($matches) {
-  $output = '<strong>Her skal øvelse nummer ' . $matches[1] . ' vises. Vi arbejder på sagen.</strong>';
-  return $output;
+  $node = node_load(check_plain($matches[1]));
+  $view = node_view($node, 'teaser');
+  return drupal_render($view);
 }
