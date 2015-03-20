@@ -71,11 +71,16 @@ function _motionsplan_exercise_tips($filter, $format, $long = FALSE) {
  * Utility function to do the hard work getting the images
  */
 function _motionsplan_exercise_display_embed($matches) {
-  $node = node_load(check_plain($matches[1]));
-  if (!$node) {
-    watchdog('motionsplan_exercise', 'Exercise ID ' . check_plain($matches[1]) . ' not found');
-    return;
+  $exercises = explode(',', $matches[1]);
+  $output = '';
+  foreach ($exercises as $exercise) {
+    $node = node_load(check_plain($exercise));
+    if (!$node) {
+      watchdog('motionsplan_exercise', 'Exercise ID ' . check_plain($matches[1]) . ' not found');
+      continue;
+    }
+    $view = node_view($node, 'teaser');
+    $output .= drupal_render($view);
   }
-  $view = node_view($node, 'teaser');
-  return drupal_render($view);
+  return $output;
 }
