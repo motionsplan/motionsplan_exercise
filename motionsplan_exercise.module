@@ -72,6 +72,10 @@ function _motionsplan_exercise_tips($filter, $format, $long = FALSE) {
  */
 function _motionsplan_exercise_display_embed($matches) {
   $node = node_load(check_plain($matches[1]));
+  if (!$node) {
+    watchdog('motionsplan_exercise', 'Exercise ID ' . check_plain($matches[1]) . ' not found');
+    return;
+  }
   $view = node_view($node, 'teaser');
   return drupal_render($view);
 }
