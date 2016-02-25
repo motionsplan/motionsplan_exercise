@@ -5,7 +5,7 @@ php:
   - 5.6
 
 install:
-  - travis_retry composer global require squizlabs/php_codesniffer=*'
+  - travis_retry composer global require squizlabs/php_codesniffer=*
   - travis_retry composer global require drupal/coder
   - cp -r ~/.composer/vendor/drupal/coder/coder_sniffer/Drupal ~/.composer/vendor/drupal/coder/coder_sniffer/DrupalPractice ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
