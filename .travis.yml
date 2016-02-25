@@ -2,13 +2,13 @@ language: php
 sudo: false
 
 php:
-  - 5.5
+  - 5.6
 
-before_script:
-  - pear install PHP_CodeSniffer
-  - wget http://ftp.drupal.org/files/projects/drupalcs-7.x-1.0-beta1.tar.gz -O ../drupalcs.tar.gz
-  - tar -xvzf ../drupalcs.tar.gz -C ../
-  - phpenv rehash
+install:
+  - travis_retry composer global require squizlabs/php_codesniffer=*'
+  - travis_retry composer global require drupal/coder
+  - cp -r ~/.composer/vendor/drupal/coder/coder_sniffer/Drupal ~/.composer/vendor/drupal/coder/coder_sniffer/DrupalPractice ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards
+  - export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 script: 
   - phpcs . --standard=../drupalcs/Drupal/ruleset.xml --extensions=php,module,inc,install,test,profile,theme
