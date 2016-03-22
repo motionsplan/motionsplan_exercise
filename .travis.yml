@@ -11,4 +11,4 @@ install:
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 script: 
-  - phpcs . --standard=../drupalcs/Drupal/ruleset.xml --extensions=php,module,inc,install,test,profile,theme
+  - phpcs . --standard=Drupal --extensions=php,module,inc,install,test,profile,theme
